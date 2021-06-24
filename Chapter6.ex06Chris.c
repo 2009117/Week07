@@ -6,6 +6,9 @@ int Hs; //This is the hours maximun at a normal day to work
 int H; //This is the hours that your work
 int HE; //This is the pay of extra hours
 int HD; //Difference of the hours
+
+char on[1000];
+
 int main(void) {
  {
    //These are the values each variable
@@ -15,7 +18,8 @@ int main(void) {
  }
   //Insert the hours of job
   printf("Insert the hours that you work \n");
-  scanf("%d",&H);
+  fgets(on, sizeof(on), stdin),
+  sscanf(on,"%d",&H);
   
     if (H<Hs) {
        P= H*PS;
