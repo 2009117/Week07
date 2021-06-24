@@ -13,10 +13,13 @@ A=91-100
 8-0 => +
 
 ********************************/
+char on[1000];
+
 int main(void) {
   
   printf("Insert your grade\n");
-  scanf("%f", &X);
+  fgets(on, sizeof(on),stdin);
+  sscanf(on, "%f", &X);
  
  //If for the A=91-100
   if (91<X && 93>X) 
