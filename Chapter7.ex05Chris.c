@@ -13,10 +13,12 @@ by each numeber is prime
 
 
 float X; //Is the variable to change
+char on[1000];
 
 int main(void) {
   printf("Introduce a Number\n"),
-  scanf("%f",&X);
+  fgets(on, sizeof(on),stdin);
+  sscanf(on, "%f",&X);
   //Divided by 2
   if (X/2 ==0)
   printf("Is not prime\n");
