@@ -22,11 +22,14 @@ float M; //Milles-Metter
 float G; //Gallons-Litters
 float In; //Inch-centimeters
 
+char on[1000];
+
 int main(void) {
 // This step is to know the conversation that the user wants
 printf("Chose the conversation that you want\n");
 printf("Milles to Metters = 1\n""Gallons-Litters = 2\n" "Inch to centimeters = 3\n");
-scanf("%f",&C);
+fgets(on,sizeof(on),stdin);
+sscanf(on,"%f",&C);
 
 //Once, we have the conversation. Is going to realice each operation. 
 
@@ -34,7 +37,8 @@ scanf("%f",&C);
   {
     //Milles to Metters
     printf("Insert the amount\n"); 
-      scanf("%f", &C2); //
+      fgets(on,sizeof(on),stdin);
+      sscanf(on,"%f", &C2); //
       R=C2*1.609344;
       printf("Asnwer: %f Metters",R);
   }
@@ -42,7 +46,8 @@ scanf("%f",&C);
   {
   if (C==2)
    printf("Insert the amount\n");
-      scanf("%f", &C2);
+      fgets(on, sizeof(on), stdin);
+      sscanf(on,"%f", &C2);
       R=C2*4.5460;
      printf("Asnwer: %f Litters",R);
   }
@@ -50,7 +55,8 @@ scanf("%f",&C);
   {
   if (C==2)
    printf("Insert the amount\n");
-      scanf("%f", &C2);
+      fgets(on, sizeof(on), stdin);
+      sscanf(on,"%f", &C2);
       R=C2*2.54;
       printf("Asnwer: %f centimeters",R);
   }
