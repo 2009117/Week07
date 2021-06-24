@@ -9,12 +9,13 @@ pennys => X/.01
 
 
 */
-char at[100];
+char on[100];
 
 int main(void) {
   float X;
   printf("Insert the amount of money (It cannnot be more than 1\n");
-  scanf("%f", &X);
+  fgets(on,sizeof(on),stdin);
+  sscanf(on,"%f", &X);
   
       if (X>1) // This it helps such a filter to the nubers that one 
     printf("Invalid number");
@@ -32,3 +33,5 @@ int main(void) {
  return 0;
   }
 
+
+ 
